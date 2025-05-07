@@ -1,0 +1,14 @@
+[
+  {
+    "hora": "12:00",
+    "disponibles": 5
+  },
+  {
+    "hora": "13:00",
+    "disponibles": 2
+  },
+  {
+    "hora": "14:00",
+    "disponibles": 0
+  }
+]

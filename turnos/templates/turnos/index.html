@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Turnos disponibles</title>
+</head>
+<body>
+    <h1>Turnos disponibles</h1>
+    <ul>
+        {% for turno in turnos %}
+            <li>
+                {{ turno.hora }} - {{ turno.disponibles }} disponibles
+                <form method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="eliminar" value="{{ turno.hora}}">
+                    <button type="submit">elimiar</button>
+                </form>
+            </li>
+        {% empty %}
+            <li>No hay turnos cargados.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Agregar nuevo turno</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="hora">Hora:</label>
+        <input type="text" name="hora" required>
+        <label for="disonibles">Disponibles:</label>
+        <input type="number" name="disponibles" required>
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>

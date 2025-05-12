@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar sesión</title>
+</head>
+<body>
+    <h2>Iniciar Sesión</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button tupe="submit">Ingresar</button>
+    </form>
+</body>
+</html>

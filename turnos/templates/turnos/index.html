@@ -31,4 +31,11 @@
         <button type="submit">Agregar</button>
     </form>
 </body>
+{% if user.is_authenticated %}
+    <p>Bienvenido, {{ user.username }}</p>
+    <form action="{% url 'logout' %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit">Cerrar sesión</button>
+    </form>
+{% endif %}
 </html>

@@ -8,9 +8,9 @@
 <body class="bg-light p-4">
 
 <div class="container">
-    {% if user.is_authnticated %}
+    {% if user.is_authenticated %}
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h4>Bienvenido, {{ user.name }}</h4>
+            <h4>Bienvenido, {{ user.username }}</h4>
             <form action="{% url 'logout' %}" method="post">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-outline-danger">Cerrar sesión</button>
@@ -38,7 +38,7 @@
 
     <div class="card">
         <div class="card-header">Agregar nuevo turno</div>
-        <dv class="card-body"
+        <div class="card-body">
             <form method="post">
                 {% csrf_token %}
                 <div class="mb-3">

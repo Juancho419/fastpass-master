@@ -2,5 +2,13 @@
   {
     "hora": "16.30",
     "disponibles": 4
+  },
+  {
+    "hora": "16.30",
+    "disponibles": 3
+  },
+  {
+    "hora": "12:00",
+    "disponibles": 8
   }
 ]

@@ -4,15 +4,7 @@
     "disponibles": 2
   },
   {
-    "hora": "12:00",
-    "disponibles": 4
-  },
-  {
     "hora": "05:00",
-    "disponibles": 2
-  },
-  {
-    "hora": "18:00",
     "disponibles": 2
   }
 ]
